@@ -22,6 +22,22 @@ const userSchema = new mongoose.Schema(
       type: Boolean,
       default: false, //email verifiaction
     },
+    emailAuthenticate: {
+      type: Boolean,
+      default: false,
+    },
+
+    twoFASecret: {
+      type: String, // 2fa secret
+    },
+    
+    isTwoFAEnabled: {
+      type: Boolean,
+      default: false,
+    },
+    twoFACode: {
+      type: String, // 2fa code
+    },
   },
   {
     timestamps: true,
